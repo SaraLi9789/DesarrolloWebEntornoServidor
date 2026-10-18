@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+	    <title>Resultado</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+<body>
+	<ol>
+		<li th:each="info : ${informacion}" th:text="${info}"></li>
+	</ol>
+		
+</body>

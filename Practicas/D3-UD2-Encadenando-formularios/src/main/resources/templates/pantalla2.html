@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+	    <title>Pantalla 2</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+<body>
+	<p th:text="${error}"></p>
+		<form th:action="@{/pantalla2}" method="post">
+			
+			<input type="hidden" name="nombre" th:value="${nombre}">
+			<input type="hidden" name="apellidos" th:value="${apellidos}">
+
+			<label>Edad:</label>
+			<select name="edad">
+				<option value="10-19">10-19-</option>
+				<option value="20-29">20-29-</option>
+				<option value="30-39">30-39</option>
+				<option value="40-49">30-49</option>
+				<option value="50-59">30-59</option>
+				<option value="60-69">30-69</option>
+				<option value="70-79">30-79</option>
+				<option value="80-89">30-89</option>
+				<option value="90-99">30-99</option>
+			</select>
+			
+			<p>Sexo:</p>
+			<label>Mujer</label>
+			<input type="radio" value="Mujer" name="sexo">
+			
+			<label>Hombre</label>
+			<input type="radio" value="Hombre" name="sexo">
+			
+			<input type="submit" value="siguiente" >
+		</form>
+		<form th:action="@{/volverPantalla1}" method="get">
+		    <input type="hidden" name="nombre" th:value="${nombre}">
+		    <input type="hidden" name="apellidos" th:value="${apellidos}">
+		    <input type="submit" value="Anterior">
+		</form>
+</body>

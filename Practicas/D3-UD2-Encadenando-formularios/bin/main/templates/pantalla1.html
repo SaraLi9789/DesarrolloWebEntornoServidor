@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+	    <title>Pantalla 1</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+<body>
+
+	<p th:text="${error}"></p>
+
+	<form th:action="@{/pantalla1}" method="post" >
+		<label>Nombre:</label>
+		<input type="text" name="nombre" th:value="${nombre}">
+				
+		<label>Apellido:</label>
+		<input type="text" name="apellidos" th:value="${apellidos}">
+		
+		
+		<input type="submit" value="siguiente" >
+		
+	</form>
+	
+</body>

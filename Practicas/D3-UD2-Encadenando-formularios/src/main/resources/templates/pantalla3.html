@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+	    <title>Pantalla 3</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+
+<body>
+	<p th:text="${error}"></p>
+	<form th:action="@{/pantalla3}" method="post">
+				
+				<input type="hidden" name="nombre" th:value="${nombre}">
+				<input type="hidden" name="apellidos" th:value="${apellidos}">
+				<input type="hidden" name="edad" th:value="${edad}">
+				<input type="hidden" name="sexo" th:value="${sexo}">
+				
+				
+				<p>Que comidas son tus favoritas </p>
+				
+				<label>Lasaña</label>
+				<input type="checkbox" name="comida" value="Lasaña">
+				
+				<label>Hamburguesa con patatas</label>
+				<input type="checkbox" name="comida" value="Hamburguesa">
+				
+				<label>Ensalada</label>
+				<input type="checkbox" name="comida" value="Ensalada">
+				
+				<label>Nuggets</label>
+				<input type="checkbox" name="comida" value="Nuggets">
+				
+				<label>Berenjena rellena</label>
+				<input type="checkbox" name="comida" value="Berenjena">
+				
+				<input type="submit" value="siguiente" >
+	</form>
+	
+	<form th:action="@{/volverPantalla2}" method="get">
+	    <input type="hidden" name="nombre" th:value="${nombre}">
+	    <input type="hidden" name="apellidos" th:value="${apellidos}">
+	    <input type="hidden" name="edad" th:value="${edad}">
+	    <input type="hidden" name="sexo" th:value="${sexo}">
+		
+	    <input type="submit" value="Anterior">
+	</form>
+</body>
